@@ -1,3 +1,11 @@
+div {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+
 body {
   margin: 0px;
   padding: 0px;
@@ -24,6 +32,62 @@ body {
   z-index: 1;
   margin: 0px;
 }
+
+/* ---------- DRAWER ICON ---------- */
+
+.drawer-icon-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-width: 42px;
+  min-height: 42px;
+  background-color: transparent;
+  cursor: pointer;
+  appearance: none;
+  outline: 0px;
+  border-width: 0px;
+  border-style: initial;
+  border-color: initial;
+  border-image: initial;
+  padding: 0px;
+}
+
+.hamburger-icon {
+  padding: 8px 0px;
+}
+
+.hamburger-icon-blocks {
+  display: block;
+  height: 2px;
+  width: 22px;
+  background-color: rgb(33, 42, 47);
+  position: relative;
+  transition: all 100ms ease 0s;
+}
+
+.hamburger-icon-blocks::before {
+  content: "";
+  position: absolute;
+  top: -8px;
+  left: 0px;
+  width: 22px;
+  height: 2px;
+  background-color: rgb(33, 42, 47);
+  transition: all 100ms ease 0s;
+}
+
+.hamburger-icon-blocks::after {
+  content: "";
+  position: absolute;
+  top: 8px;
+  left: 0px;
+  width: 22px;
+  height: 2px;
+  background-color: rgb(33, 42, 47);
+  transition: all 100ms ease 0s;
+}
+
+/* ---------- END OF DRAWER ICON ---------- */
 
 /* ---------- LEFT ---------- */
 
@@ -192,6 +256,11 @@ body {
   max-width: 100%;
 }
 
+.top-navigation-header-desktop-option-tertiary-cart {
+  margin-left: 0px;
+  padding-left: 0px;
+}
+
 .top-navigation-header-desktop-cart-icon-button {
   display: flex;
   justify-content: center;
@@ -237,3 +306,27 @@ body {
   padding-left: 7px;
   padding-bottom: 6px;
 }
+
+@media (min-width: 992px) {
+  .drawer-icon-button {
+    display: none;
+  }
+ }
+
+ @media (max-width: 991px) {
+   .drawer-icon-button {
+      display: flex;
+   }
+   .top-navigation-header-desktop-option-primary {
+      display: none;
+   }
+   .top-navigation-header-desktop-option-secondary {
+      display: none;
+   }
+   .top-navigation-header-desktop-option-tertiary {
+      display: none;
+   }
+   .top-navigation-header-desktop-cart-icon-button {
+      margin: 0;
+   }
+ }

@@ -10,6 +10,14 @@ class App extends React.Component {
         <div class='top-navigation'>
           <div class='top-navigation-desktop'>
             <nav class='top-navigation-header-desktop'>
+
+              <button aria-expanded="false" aria-controls="top-navigation-drawer-mobile" aria-label="Toggle navigation" class="drawer-icon-button">
+                <div class="hamburger-icon">
+                  <div class="hamburger-icon-blocks">
+                  </div>
+                </div>
+              </button>
+
               <ul class='top-navigation-header-desktop-list-left'>
 
                 <li class='top-navigation-header-desktop-option-primary'>
@@ -93,7 +101,7 @@ class App extends React.Component {
                   </div>
                 </li>
 
-                <li class='top-navigation-header-desktop-option-tertiary'>
+                <li class='top-navigation-header-desktop-option-tertiary-cart'>
                   <button class='top-navigation-header-desktop-cart-icon-button'>
                     <div class='top-navigation-header-desktop-cart'>
 
